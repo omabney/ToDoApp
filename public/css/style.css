@@ -1,0 +1,320 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: linear-gradient(to bottom, #68EACC 0%,  #497BE8 100%);
+    min-height: 100vh;
+}
+
+.card{
+    background-color: rgb(248, 248, 255);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding: 50px;
+    margin: 120px auto;
+    max-width: 480px;
+    position: relative;
+}
+
+@media only screen and (max-width:400px) {
+    body {
+      background-color: lightblue;
+    }
+    main{
+        margin: 2px;
+    }
+  }
+
+header{
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+#control-btn{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    min-width: 380px;
+    padding: 0.6rem;
+    padding-left: 30px;
+    border-radius: 2px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+#control-btn #task-all{
+    padding: 3px 10px 3px 10px;
+    border: 1px solid bisque;
+    cursor: pointer;
+    border-radius: 0.3em;
+    color: rgb(245, 245, 245);
+    background-color: #8E49E8;
+}
+
+#control-btn #task-all:hover{
+    background-color: #a465f6;
+    color: rgb(245, 245, 245);;
+    transition: 0.5s;
+}
+
+#control-btn #task-active{
+    padding: 3px 10px 3px 10px;
+    border: 1px solid bisque;
+    cursor: pointer;
+    border-radius: 0.3em;
+    color: rgb(245, 245, 245);
+    background-color:  #8E49E8;
+    opacity: 1;
+}
+
+#control-btn #task-active:hover{
+    background-color: #a465f6;
+    color: rgb(245, 245, 245);
+    transition: 0.5s;
+}
+
+#control-btn #task-completed{
+    padding: 3px 10px 3px 10px;
+    border: 1px solid bisque;
+    cursor: pointer;
+    border-radius: 0.3em;
+    color: rgb(245, 245, 245);
+    font-size: 1.1rem;
+    background-color: #8E49E8;
+    opacity: 1;
+}
+
+#control-btn #task-completed:hover{
+    background-color: #a465f6;
+    color: rgb(245, 245, 245);
+    transition: 0.5s;
+}
+
+#control-btn #left{
+    font-size: 1.1rem;
+}
+
+
+
+
+.todo {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem;
+    list-style: none;
+    font-size: 1.3rem;
+    line-height: 45px;
+    min-width: 350px;
+    background-color: #f2f2f2;
+    transition: all 0.5s;
+    
+  }
+  
+  .todo p {
+    flex: 1;
+    padding: 0 0.5rem;
+    transition: all 0.5s;
+  }
+  
+.far,.fas{
+    cursor: pointer;
+}
+
+.fa-square{
+    color: white;
+    background-color: rgb(36, 162, 235);
+    padding: 1rem;
+    transition: all 0.5s;
+}
+
+.fa-square:hover{
+    background-color: rgb(100, 198, 255);
+}
+
+.fa-trash{
+    background-color: rgb(218, 37, 37);
+    color: white;
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+.fa-trash:hover{
+    background-color: rgb(245, 79, 79);
+}
+
+footer{
+    margin-top: 100px;
+}
+
+footer form{
+    display: flex;
+    justify-content: wrap;
+}
+
+form{
+    display: flex;
+    justify-content: wrap;
+}
+
+#add-list input{
+    width: 300px;
+    height: 48px;
+    border: 1px solid #ccc;
+    font-size: 17px;
+    border-radius: 3px;
+    padding-left: 15px;
+}
+
+#add-list button{
+    width: 50px;
+    height: 45px;
+    border: none;
+    outline: none;
+    background: #8E49E8;
+    color: #fff;
+    font-size: 22px;
+    cursor: pointer;
+    border-radius: 3px;
+    margin-left: 5px;
+}
+
+#add-list button:hover{
+    background:#a465f6
+}
+
+.completed {
+    opacity: 0.5;
+  }
+  
+  .completed p {
+    text-decoration: line-through;
+  }
+  
+  .main-header {
+    width: 100%;
+    height: 3.5rem;
+    background-color: #00695c;
+    padding: 0 1.5rem;
+    display: flex;
+    align-items: center;
+  }
+  
+  .main-header__nav {
+    height: 100%;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  .main-header__item-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  
+  .main-header__item {
+    margin: 0 1rem;
+    padding: 0;
+  }
+  
+  .main-header__item a,
+  .main-header__item button {
+    font: inherit;
+    background: transparent;
+    border: none;
+    text-decoration: none;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .main-header__item a:hover,
+  .main-header__item a:active,
+  .main-header__item a.active {
+    color: #ffffff;
+    font-size: 1.5rem;
+  }
+
+  .before_login{
+      justify-content: right;
+  }
+
+  .login-form {
+    width: 20rem;
+    max-width: 90%;
+    margin: auto;
+    display: block;
+  }
+
+  .form-control {
+    margin: 1rem 0;
+  }
+  
+  .form-control label,
+  .form-control input,
+  .form-control textarea {
+    display: block;
+    width: 100%;
+    margin-bottom: 0.25rem;
+  }
+  
+  .form-control input,
+  .form-control textarea {
+    border: 1px solid #a1a1a1;
+    font: inherit;
+    border-radius: 2px;
+  }
+  
+  .form-control input:focus,
+  .form-control textarea:focus {
+    outline-color: #00695c;
+  }
+  
+  .form-control input.invalid,
+  .form-control textarea.invalid {
+    border-color: red;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.25rem 1rem;
+    text-decoration: none;
+    font: inherit;
+    border: 1px solid #00695c;
+    color: #00695c;
+    background: white;
+    border-radius: 3px;
+    cursor: pointer;
+  }
+  
+  .btn:hover,
+  .btn:active {
+    background-color: #00695c;
+    color: white;
+  }
+  
+  .btn.danger {
+    color: red;
+    border-color: red;
+  }
+  
+  .btn.danger:hover,
+  .btn.danger:active {
+    background: red;
+    color: white;
+  }
+
+  .centered {
+    text-align: center;
+  }
+
+  .alignright{
+    margin-left: auto;
+  }

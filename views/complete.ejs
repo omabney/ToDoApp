@@ -1,0 +1,27 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/navigation.ejs') %>
+
+    <div class="card">
+        <header>Todo List (Completed)</header>
+        <main>
+            <ul class="todo-list">
+                <% todos.forEach(todo =>{
+                        if(todo.isCompleted){  %>
+                            <li class="todo completed">
+                                <a href="/complete/todo/<%= todo._id %>">
+                                    <i class="completeBtn far fa-square"></i>
+                                </a>
+                                <p class="todoText"><%= todo.todo %></p>
+                                <input value="" class ="id" name ="id" hidden>
+                                <a href="/delete/todo/<%= todo._id %>">
+                                    <i class="trashBtn fas fa-trash"></i>
+                                </a>
+                            </li>
+                        <% }
+                }) %>     
+            </ul>
+            
+        </main>
+    </div>
+
+    <%- include('./partials/footer.ejs') %>

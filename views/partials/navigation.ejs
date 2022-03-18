@@ -1,0 +1,34 @@
+<header class="main-header">
+    <nav class="main-header__nav">
+        <ul class="main-header__item-list after_login">
+            <% if (isAuthenticated) { %>
+                <li class="main-header__item">
+                    <a class="active" href="/home">Home</a>
+                </li>
+                <li class="main-header__item">
+                    <a class="active" href="/active">Active</a>
+                </li>
+                <li class="main-header__item">
+                    <a class="active" href="/completed">Complete
+                    </a>
+                </li>
+                <li class="main-header__item alignright">
+                    <form action="/logout" method="post">
+                        <button type="submit" style="font-size:1.5rem;padding:5px">Logout</button>
+                    </form>
+                </li>
+            <% } %>
+        </ul>
+        <ul class="main-header__item-list before_login">
+            <% if (!isAuthenticated) { %>
+                <li class="main-header__item">
+                    <a class="active" href="/">Login</a>
+                </li>
+                <li class="main-header__item">
+                    <a class="active" href="/signup">Signup</a>
+                </li>
+            <% } %>
+        </ul>
+    </nav>
+</header>
+
